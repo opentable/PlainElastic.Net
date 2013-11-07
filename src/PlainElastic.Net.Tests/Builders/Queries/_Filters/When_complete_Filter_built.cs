@@ -9,13 +9,15 @@ namespace PlainElastic.Net.Tests.Builders.Queries
     {
         Because of = () => result = new Filter<FieldsTestClass>()                                                
                                             .And(a => a.Custom("And"))
+                                            .GeoBoundingBox(b => b.Custom("BoundingBox"))
                                             .Or(o => o.Custom("Or"))
-                                            .Not( n => n.Custom("Not") )
+                                            .Not(n => n.Custom("Not"))
                                             .Exists(e => e.Custom("Exists"))
                                             .Missing(m => m.Custom("Missing"))
                                             .Ids(ids => ids.Custom("Ids"))
                                             .Nested(n => n.Custom("Nested"))
-                                            .HasChild(h => h.Custom("HasChild"))
+                                            .HasChild<AnotherTestClass>(h => h.Custom("HasChild"))
+                                            .HasParent<AnotherTestClass>(h => h.Custom("HasParent"))
                                             .Range(r => r.Custom("Range"))
                                             .NumericRange(n => n.Custom("NumericRange"))
                                             .Term(t => t.Custom("Term"))
@@ -36,6 +38,7 @@ namespace PlainElastic.Net.Tests.Builders.Queries
 
         It should_return_correct_result = () => result.ShouldEqual(("'filter': " +
                                                                         "{ 'and': [ And ] }," +
+                                                                        "{ 'geo_bounding_box': BoundingBox }," +
                                                                         "{ 'or': [ Or ] }," +
                                                                         "{ 'not': { Not } }," +
                                                                         "{ 'exists': { Exists } }," +
@@ -43,6 +46,7 @@ namespace PlainElastic.Net.Tests.Builders.Queries
                                                                         "{ 'ids': { Ids } }," +
                                                                         "{ 'nested': { Nested } }," +
                                                                         "{ 'has_child': { HasChild } }," +
+                                                                        "{ 'has_parent': { HasParent } }," +
                                                                         "{ 'range': { Range } }," +
                                                                         "{ 'numeric_range': { NumericRange } }," +
                                                                         "{ 'term': { Term } }," +
