@@ -13,7 +13,10 @@ namespace PlainElastic.Net.Serialization
             {"range", typeof(RangeFacetResult)},
             {"filter", typeof(FilterFacetResult)},
             {"statistical", typeof(StatisticalFacetResult)},
-            {"terms_stats", typeof(TermsStatsFacetResult)}
+            {"terms_stats", typeof(TermsStatsFacetResult)},
+            {"geo_distance", typeof(GeoDistanceFacetResult)},
+            {"histogram", typeof(HistogramFacetResult)},
+            {"date_histogram", typeof(DateHistogramFacetResult)}
         };
 
 
