@@ -61,7 +61,42 @@ namespace PlainElastic.Net.Queries
             RegisterJsonPartExpression(termsStatsFacet);
             return this;
         }
-        
+
+        /// <summary>
+        /// The geo_distance facet is a facet providing information for ranges of distances from a provided geo_point 
+        /// including count of the number of hits that fall within each range, and aggregation information (like total).
+        /// see http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-facets-geo-distance-facet.html
+        /// </summary>
+        public Facets<T> GeoDistance(Func<GeoDistanceFacet<T>, GeoDistanceFacet<T>> geoDistanceFacet)
+        {
+            RegisterJsonPartExpression(geoDistanceFacet);
+            return this;
+        }
+
+        /// <summary>
+        /// The histogram facet works with numeric data by building a histogram across intervals of the field values.
+        /// Each value is "rounded" into an interval (or placed in a bucket),
+        /// and statistics are provided per interval/bucket (count and total)
+        /// see http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-facets-histogram-facet.html
+        /// </summary>
+        public Facets<T> Histogram(Func<HistogramFacet<T>, HistogramFacet<T>> histogramFacet)
+        {
+            RegisterJsonPartExpression(histogramFacet);
+            return this;
+        }
+
+        /// <summary>
+        /// The histogram facet works with numeric data by building a histogram across intervals of the field values.
+        /// Each value is "rounded" into an interval (or placed in a bucket),
+        /// and statistics are provided per interval/bucket (count and total)
+        /// see http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-facets-histogram-facet.html
+        /// </summary>
+        public Facets<T> DateHistogram(Func<DateHistogramFacet<T>, DateHistogramFacet<T>> dateHistogramFacet)
+        {
+            RegisterJsonPartExpression(dateHistogramFacet);
+            return this;
+        }
+
 
         protected override bool HasRequiredParts()
         {
