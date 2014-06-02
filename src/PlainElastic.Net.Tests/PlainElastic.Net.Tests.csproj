@@ -147,6 +147,8 @@
     <Compile Include="Builders\Analysis\Tokenizers\When_empty_TokenizerSettings_built.cs" />
     <Compile Include="Builders\Analysis\When_complete_Analysis_built.cs" />
     <Compile Include="Builders\Analysis\When_empty_Analysis_built.cs" />
+    <Compile Include="Builders\Bulk\When_Create_Bulk_operation_built_for_string.cs" />
+    <Compile Include="Builders\Bulk\When_Bulk_indexes_built_from_string_collection.cs" />
     <Compile Include="Builders\Bulk\When_Bulk_mixed_operations_built_from_collection.cs" />
     <Compile Include="Builders\Bulk\When_Bulk_indexes_pipelined_from_collection.cs" />
     <Compile Include="Builders\Bulk\When_Delete_Bulk_operation_built.cs" />
@@ -157,6 +159,9 @@
     <Compile Include="Builders\Commands\BulkCommand\When_complete_BulkCommand_built.cs" />
     <Compile Include="Builders\Commands\DeleteByQuery\When_complete_DeleteByQueryCommand_built.cs" />
     <Compile Include="Builders\Commands\DeleteByQuery\When_DeleteByQueryCommand_with_multiple_indexes_and_types_built.cs" />
+    <Compile Include="Builders\Commands\IndexAliasCommand\When_complete_IndexAliasCommand_built.cs" />
+    <Compile Include="Builders\Commands\IndexAliasesCommand\When_partial_IndexAliasesCommand_built_without_alias.cs" />
+    <Compile Include="Builders\Commands\IndexAliasCommand\When_partial_IndexAliasCommand_built_without_index.cs" />
     <Compile Include="Builders\Commands\SearchScrollCommand\When_complete_SearchScrollCommand_built.cs" />
     <Compile Include="Builders\Commands\MoreLikeThisCommand\When_complete_MoreLikeThisCommand_built.cs" />
     <Compile Include="Builders\Commands\MoreLikeThisCommand\When_MoreLikeThisCommand_with_reflected_fields_built.cs" />
@@ -197,6 +202,7 @@
     <Compile Include="Builders\Mappings\Attachment\When_complete_Attachment_mapping_built.cs" />
     <Compile Include="Builders\Mappings\Core\Boolean\When_complete_Boolean_mapping_built.cs" />
     <Compile Include="Builders\Mappings\Core\Binary\When_complete_Binary_mapping_built.cs" />
+    <Compile Include="Builders\Mappings\Core\GeoPoint\When_complete_GeoPoint_mapping_built.cs" />
     <Compile Include="Builders\Mappings\Core\String\When_complete_String_mapping_built.cs" />
     <Compile Include="Builders\Mappings\Core\CustomProperty\When_CustomProperty_mapping_with_explicit_type_built.cs" />
     <Compile Include="Builders\Mappings\Core\CustomProperty\When_CustomProperty_mapping_with_false_condition_built.cs" />
@@ -254,6 +260,7 @@
     <Compile Include="Builders\Queries\Indices\When_empty_IndicesQuery_built.cs" />
     <Compile Include="Builders\Queries\SingleQueryBuilder\When_empty_SingleQueryBuilder_built.cs" />
     <Compile Include="Builders\Queries\SingleQueryBuilder\When_SingleQueryBuilder_built.cs" />
+    <Compile Include="Builders\Queries\Sort\When_Sort_with_script_built.cs" />
     <Compile Include="Builders\Queries\Sort\When_Sort_with_geo_distance_geohash_with_default_order_built.cs" />
     <Compile Include="Builders\Queries\Sort\When_Sort_with_geo_distance_lat_lon_with_default_order_built.cs" />
     <Compile Include="Builders\Queries\Sort\When_Sort_with_geo_distance_geohash_by_reflected_field_built.cs" />
@@ -330,6 +337,7 @@
     <Compile Include="Builders\Queries\_Filters\GeoDistance\When_complete_GeoDistanceFilter_built_with_DistanceType_specified.cs" />
     <Compile Include="Builders\Queries\_Filters\GeoDistance\When_complete_GeoDistanceFilter_built.cs" />
     <Compile Include="Builders\Queries\_Filters\GeoDistance\When_GeoDistanceFilter_with_Distance_empty_built.cs" />
+    <Compile Include="Builders\Queries\_Filters\Nested\When_NestedFilter_with_query_part_built.cs" />
     <Compile Include="Builders\Queries\_Filters\NumericRange\When_complete_NumericRangeFilter_built.cs" />
     <Compile Include="Builders\Queries\_Filters\NumericRange\When_NumericRangeFilter_without_range_parts_built.cs" />
     <Compile Include="Builders\Queries\_Filters\Script\When_complete_ScriptFilter_built.cs" />
@@ -429,6 +437,7 @@
     <Compile Include="Integration\Connection\When_partial_GET_request_on_valid_ES_instance.cs" />
     <Compile Include="Integration\Connection\When_full_GET_request_on_valid_ES_instance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\When_index_alias_command_result_deserialized.cs" />
     <Compile Include="Serialization\When_date_histogram_facets_result_deserialized.cs" />
     <Compile Include="Serialization\When_histogram_facets_result_deserialized.cs" />
     <Compile Include="Serialization\When_geo_distance_facets_result_deserialized.cs" />
