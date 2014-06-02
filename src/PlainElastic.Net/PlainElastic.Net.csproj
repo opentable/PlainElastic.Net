@@ -57,6 +57,9 @@
     <Compile Include="Builders\Commands\CloseCommand.cs" />
     <Compile Include="Builders\Commands\BulkCommand.cs" />
     <Compile Include="Builders\Commands\DeleteByQueryCommand.cs" />
+    <Compile Include="Builders\Commands\IndexAliasCommand.cs" />
+    <Compile Include="Builders\Commands\IndexAliasesCommand.cs" />
+    <Compile Include="Serialization\Results\IndexAliasesResult.cs" />
     <Compile Include="Builders\Commands\SearchScrollCommand.cs" />
     <Compile Include="Builders\Commands\MoreLikeThisCommand.cs" />
     <Compile Include="Builders\Commands\CreateIndexCommand.cs" />
@@ -137,6 +140,7 @@
     <Compile Include="Builders\IndexSettings\IndexSettingsBuilder.cs" />
     <Compile Include="Builders\IndexSettings\Settings\Setting.cs" />
     <Compile Include="Builders\Mappings\Attachment.cs" />
+    <Compile Include="Builders\Mappings\Core\GeoPointMap.cs" />
     <Compile Include="Builders\Mappings\Core\ElasticCoreTypeMapper.cs" />
     <Compile Include="Builders\Mappings\Core\CustomPropertyMap.cs" />
     <Compile Include="Builders\Mappings\MultiField.cs" />
